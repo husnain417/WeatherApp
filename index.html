@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+    <script src="charts.js"></script>
+</head>
+<body>
+    <div class="body">
+        <div class="sidebar">
+            <div class="sideup">
+                <div class="logo">
+                    <img src="assets/18520852.jpg" alt="logo">
+                </div>
+             </div>
+             <div class="menuitems">
+                <div class="menu">
+                    <a href="index.html">
+                        <div id="dashboardSidebar" class="active">DASHBOARD</div>
+                    </a>
+                    <a href="tables.html">
+                        <div id="tablesSidebar">TABLES</div>
+                    </a>
+                </div>                
+            </div>
+        </div>
+        <div class="main">
+            <div class="header">
+                <div class="hamburger-menu" onclick="toggleMenu()">
+                    <i class="fas fa-bars"></i>
+                    <div id="dropdownMenu" class="dropdown-content">
+                        <div class="menu-option"><a href="index.html">DASHBOARD</a></div>
+                        <div class="menu-option"><a href="tables.html">TABLES</a></div>
+                    </div>
+                </div>
+                <div class="info">
+                    <p>Hi there, <br>Husnain</p>
+                </div>
+                <form id="search">
+                    <input id="searchInput" type="text" placeholder="Enter city name" required>
+                    <button type="submit">Search</button>
+                </form>
+                <div class="profilepic">
+                    <img src="assets/profile.jpg" alt="Profile Image" width="50px" height="50px">
+                </div>
+            </div>
+            <div class="main_body">
+                <div id="loading" style="display: none;">
+                    <p>Loading...</p>
+                    <div class="tenor-gif-embed" data-postid="25755077" data-share-method="host" data-aspect-ratio="1" data-width="70%"><a href="https://tenor.com/view/loading-load-gif-25755077">Loading GIF</a>from <a href="https://tenor.com/search/loading-gifs">Loading GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+                </div>
+                <div id="weatherInfo" class="weatherdata">
+                    <div class="left">
+                        <span id="city" class="city">Islamabad</span>
+                        <div>       
+                            <span id="temp" class="temp">24 °C</span>                 
+                            <label for="unitToggle">
+                            <input type="checkbox" id="unitToggle" /> °F
+                            </label>
+                        </div>
+                        <span id="feels" class="feels">Feels like: 22 °C</span>
+                    </div>
+                    <div class="center">
+                        <img id="weatherIcon" alt="Weather Icon">
+                        <br>
+                        <span id="type" class="type">Sunny</span>
+                    </div>
+                    <div class="right">
+                        <div class="weather-item">
+                            <i class="fas fa-sun"></i> 
+                            <span id="sunrise">Sunrise: 06:00 AM</span>
+                        </div>
+                        <div class="weather-item">
+                            <i class="fas fa-sun"></i>
+                            <span id="sunset">Sunset: 07:00 PM</span>
+                        </div>
+                        <div class="weather-item">
+                            <i class="fas fa-tint"></i>
+                            <span id="humidity">Humidity: 75%</span>
+                        </div>
+                        <div class="weather-item">
+                            <i class="fas fa-wind"></i>
+                            <span id="wind_speed">Wind Speed: 15 km/h</span>
+                        </div>
+                        <div class="weather-item">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span id="pressure">Pressure: 1015 hPa</span>
+                        </div>
+                        <div class="weather-item">
+                            <i class="fas fa-sun"></i>
+                            <span id="uv_index">UV Index: 5</span>
+                        </div>
+                    </div>
+                </div>                                
+                <div id="data" class="data">
+                    <div>
+                        <canvas id="barChart" width="300" height="200"></canvas>
+                    </div>
+                    <div>
+                        <canvas id="doughnutChart" width="300" height="200"></canvas>
+                    </div>
+                    <div>
+                        <canvas id="lineChart" width="300" height="200"></canvas>                    
+                    </div>
+                </div>                
+            </div>
+        </div>
+    </div>
+</body>
+</html>

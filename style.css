@@ -1,0 +1,492 @@
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* background: linear-gradient(135deg, #232526, #414345); */
+    background-color: #0F0F0F;
+    font-family: 'Manrope', sans-serif;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.body {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    background-color: #1E1E1E;
+    width: 250px;
+    max-width: 250px;
+    min-width: 250px;
+    padding: 20px;
+    box-shadow: 10px 0 20px rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.sideup {
+    border-bottom: 1px solid #ffffff30;
+    padding-bottom: 22px;
+}
+
+.logo {
+    width: 130px;
+    height: 80px;
+    margin: 0 auto;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+}
+
+.menu {
+    margin-top: 50px;
+}
+
+.menu a
+{
+    text-decoration: none;
+    color: white;
+    font-family: 'Manrope', sans-serif;
+    font-weight: bold;
+}
+
+.dropdown-content div a
+{
+    text-decoration: none;
+    color: white;
+    font-family: 'Manrope', sans-serif;
+    font-weight: bold;
+}
+
+.menu div {
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 15px 10px;
+    margin-bottom: 10px;
+    background-color: #2d2d2d;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border-radius: 8px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    letter-spacing: 0.05rem; 
+}
+
+.menu div:hover {
+    background-color: #4a4a4a;
+    transform: translateY(-3px); 
+}
+
+.menu div.active {
+    border-left: 4px solid #f7f7f7; 
+    background-color: #3e3e3e;
+}
+
+.main {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    border-radius: 10px;
+    margin-left: 20px;
+}
+
+.menuitems {
+    width: 100%;
+}
+
+.header {
+    position: absolute;
+    top: 10px;
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: #1E1E1E;
+    border-radius: 30px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6), 0 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+.info p {
+    color: #fff; 
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+#loading {
+    margin-top: 10rem;
+    text-align: center;
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+
+#search
+{
+    display: flex;
+}
+
+#search > input {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    background-color: #ffffff; 
+    color: #000000;
+    width: 400px;
+}
+
+#search > button
+{
+    padding: 10px 25px;
+    border-radius: 10px;
+    background-color: rgb(65, 127, 235);
+    border: none;
+    color: white;
+    font-weight: 300;
+    margin-left: 5px;
+}
+
+.search input[type="text"]::placeholder {
+    color: #888888; /* Placeholder color */
+}
+
+.profilepic img {
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+}
+
+
+.main_body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+    padding-top: 90px !important;
+}
+
+#weatherInfo {
+    transition: background-image 0.5s ease-in-out; 
+}
+
+
+.weatherdata {
+    width: 1000px;
+    background-color: #1E1E1E;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    font-size: 1.5rem;
+    color: #f1f1f1;
+    display: flex;
+    flex-direction: row;
+    align-items:start;
+    justify-content: space-around;
+    margin-top: 1rem;
+}
+
+.right
+{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.weather-item {
+    display: flex;
+    align-items: center; /* Align icons and text */
+    gap: 10px; /* Space between icon and text */
+}
+
+.weather-item i {
+    font-size: 1.2rem; /* Size of the icons */
+    font-weight: bold;
+}
+
+.weather-item span
+{
+    font-size: 1rem;
+}
+
+
+.data {
+    width: 100%; 
+    display: flex; 
+    justify-content: space-around; 
+    align-items: center; 
+    flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
+}
+
+.data div {
+    background-color: #1E1E1E;
+    width: 280px; /* Set width for each item */
+    height: 257px; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    padding: 14px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.5), 0px 6px 15px rgba(0, 0, 0, 0.3);}
+
+.data div canvas {
+    width: 100%; 
+    height: auto;
+}
+
+/* Media query for max-width 768px */
+@media (max-width: 770px) {
+    .data {
+        flex-direction: row; /* Ensure it stays in a row */
+        justify-content: center; /* Center items */
+        gap: 20px;
+    }
+}
+
+
+
+.temp
+{
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.feels
+{
+    font-weight: bold;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+    height: 180px;
+    border-radius: 10px;
+    margin-top: -2rem;
+}
+
+.center > img {
+    width: 100%;
+    height: auto;
+}
+
+.center {
+    margin-top: -2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #f1f1f1;
+    text-align: center;
+}
+
+.type
+{
+    margin-top: -2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #f1f1f1;
+    text-align: center;}
+
+.city
+{
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: rgb(229, 218, 218);
+}
+
+.left
+{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger-menu i {
+    font-size: 2rem;
+    color: #fff;
+}
+
+.sidebar.active {
+    display: flex; /* Show sidebar when active */
+}
+
+.sidebar {
+    transition: all 0.3s ease-in-out;
+}
+
+.dropdown-content {
+    display: none; /* Initially hidden */
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    background-color: #1c1c1c;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    z-index: 1000;
+}
+
+.dropdown-content .menu-option {
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content .menu-option:hover {
+    background-color: #4a4a4a;
+}
+
+/* Show dropdown when '.show' class is active */
+.dropdown-content.show {
+    display: block;
+}
+
+
+@media (max-width: 1200px) {
+    .weatherdata, .data {
+        width: 100%; 
+    }
+}
+
+@media (max-width: 768px) {
+    .body {
+        flex-direction: column; /* Stack sidebar and main on smaller screens */
+    }
+
+    .sidebar {
+        display: none; /* Hide sidebar */
+    }
+
+    .hamburger-menu {
+        display: block; /* Show hamburger menu */
+    }
+
+    .info {
+        display: none; /* Hide "Hi there, Husnain" */
+    }
+
+    .main {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .main_body
+    {
+        width: 100%;
+    }
+
+    .header {
+        width: 90%;
+        gap: 10px;
+    }
+
+    #search > input {
+        width: 100%; /* Full-width search input */
+    }
+
+    .weatherdata {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .center {
+        margin-top: 0;
+    }
+
+    .right, .left {
+        width: 100%;
+        text-align: center;
+    }
+
+    .weatherdata
+    {
+        gap: 1.2rem;
+    }
+
+    .right 
+    {
+        align-items: center;
+    }
+}
+
+@media (max-width: 500px) {
+    .sidebar {
+        padding: 10px;
+    }
+
+    .menu div {
+        font-size: 0.8rem; /* Reduce menu text size */
+    }
+
+    .header {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .profilepic img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .temp {
+        font-size: 3rem; /* Smaller temp font */
+    }
+
+    .feels {
+        font-size: 1rem;
+    }
+
+    .weather-item i {
+        font-size: 1rem; /* Smaller icons */
+    }
+
+    .city {
+        font-size: 1.5rem; /* Smaller city font */
+    }
+
+    #search > input {
+        width: 60%; /* Full-width search input */
+    }
+
+    #search > button 
+    {
+        padding:7px 14px;
+    }
+
+    .temp
+    {
+        font-size: 2.3rem;
+    }
+}

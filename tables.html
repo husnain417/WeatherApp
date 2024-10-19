@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="tables.css" class="css">
+</head>
+<body>
+    <div class="body">
+        <div class="sidebar">
+            <div class="sideup">
+                <div class="logo">
+                    <img src="assets/18520852.jpg" alt="logo">
+                </div>
+            </div>
+            <div class="menuitems">
+                <div class="menu">
+                    <a href="index.html">
+                        <div id="dashboardSidebar" >DASHBOARD</div>
+                    </a>
+                    <a href="tables.html">
+                        <div id="tablesSidebar" class="active">TABLES</div>
+                    </a>
+                </div>                
+            </div>
+        </div>
+        <div class="main">
+            <div class="header">
+                <div class="hamburger-menu" onclick="toggleMenu()">
+                    <i class="fas fa-bars"></i>
+                    <div id="dropdownMenu" class="dropdown-content">
+                        <div class="menu-option"><a href="index.html">DASHBOARD</a></div>
+                        <div class="menu-option"><a href="tables.html">TABLES</a></div>
+                    </div>
+                </div>
+                <div class="info">
+                    <p>Hi there, <br>Husnain</p>
+                </div>
+                <form id="search">
+                    <input id="searchInput" type="text" placeholder="Enter city name" required>
+                    <button type="submit">Search</button>
+                </form>
+                <div class="profilepic">
+                    <img src="assets/profile.jpg" alt="Profile Image" width="50px" height="50px">
+                </div>
+            </div>
+            <div class="body_forecast">
+                <div class="tablecont">
+                    <h1>Weather Forecast:<span id="city1" class="city1">Islamabad</span></h1>
+                    
+                    <label class="lab" for="filters">Apply Filter:</label>
+                    <select id="filters">
+                        <option value="none">No Filter</option>
+                        <option value="ascTemp">Temperatures (Ascending)</option>
+                        <option value="descTemp">Temperatures (Descending)</option>
+                        <option value="rainyDays">Rainy Days Only</option>
+                        <option value="highestTemp">Day with Highest Temperature</option>
+                    </select>
+                    
+                    <table id="weatherTable">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Temperature</th>
+                                <th>Condition</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                    
+                    <div class="pagination">
+                        <button id="prevPage" disabled>Previous</button>
+                        <span id="currentPage">Page 1</span>
+                        <button id="nextPage">Next</button>
+                    </div>
+                </div>
+                
+                <div class="botcont">
+                    <div class="chatbot">
+                        <h1>Chat Bot</h1>
+                        <div id="chatbotMessages" class="chatbot-messages" style="max-height: 400px; overflow-y: auto;"></div>
+                        <div class="chat">
+                            <input id="chatInput" class="chat-input" type="text" placeholder="Ask me something..." />
+                            <button id="sendChat" class="chat-send-btn">Send</button>
+                    </div>
+                    </div>
+                </div>                
+            </div>
+        </div>
+    </div>
+
+    <!-- Include scripts at the bottom to ensure DOM is fully loaded -->
+    <script src="script.js"></script>
+    <script src="chatbot.js"></script>
+    <script src="table.js"></script>
+</body>
+</html>

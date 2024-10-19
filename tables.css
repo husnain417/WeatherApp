@@ -1,0 +1,257 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.tablecont
+{
+    flex: 1;
+    background-color: #1E1E1E;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.5), 0px 6px 15px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+#filters
+{
+    background-color: #6a6969;
+    color: white;
+}
+
+.lab
+{
+    font-size: 0.9rem;
+}
+
+.tablecont h1
+{
+    font-size: 1.4rem;
+}
+
+table th, table td {
+    padding: 6px; /* Reduce padding for smaller table */
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-size: 0.95rem; /* Reduce font size */
+}
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.pagination button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.pagination button:disabled {
+    background-color: #999;
+    cursor: not-allowed;
+}
+
+
+.body_forecast
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 50px;
+    gap: 20px;
+}
+
+.city1
+{
+    font-size: 1.3rem;
+    margin-left: 0.8rem;
+    font-weight: bold;
+}
+
+.botcont {
+    flex: 1;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px; 
+}
+
+.chatbot {
+    flex: 1;
+    width: 100%;
+    background-color: #1E1E1E;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.5), 0px 6px 15px rgba(0, 0, 0, 0.3);   
+    padding: 30px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column; 
+    gap: 10px;
+}
+
+.chatbot-messages {
+    height: 300px;
+    overflow-y: auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #5f5d5d;
+    border-radius: 10px; /* Rounded corners for the message container */
+    margin-bottom: 10px; /* Space between messages and input */
+    display: flex; /* Enable flexbox for messages */
+    flex-direction: column; /* Arrange messages vertically */
+}
+
+.message {
+    margin: 5px 0; /* Space between individual messages */
+    padding: 10px; /* Padding inside messages */
+    border-radius: 10px; /* Rounded corners for each message */
+    max-width: 70%; /* Limit the width of messages */
+    word-wrap: break-word; /* Allow long words to break onto the next line */
+}
+
+.user-message {
+    background-color: #007bff; /* User message background color */
+    color: white; /* User message text color */
+    align-self: flex-end; /* Align user messages to the right */
+    margin-left: auto; /* Push user messages to the right */
+}
+
+.bot-message {
+    background-color: #f1f1f1; /* Bot message background color */
+    color: black; /* Bot message text color */
+    align-self: flex-start; /* Align bot messages to the left */
+}
+
+.chat
+{
+    display: flex;
+    gap: 5px;
+    width: 100%;
+}
+
+.chat-input {
+    width: 80%;
+    padding: 10px;
+    border-radius: 10px; /* Rounded corners for input */
+}
+
+.chat-send-btn {
+    color: white;
+    border: none;
+    background-color: #007bff; /* User message background color */
+    padding: 10px 25px;
+    border-radius: 10px; /* Rounded corners for button */
+}
+
+.chatbot h1
+{
+    font-size: 1.4rem;
+}
+
+
+/* Media Queries */
+@media (max-width: 1024px) { /* Tablets */
+
+    .botcont {
+        padding: 0 40px; /* Adjust padding for tablets */
+    }
+}
+
+@media (max-width: 768px) { /* Mobile Devices */
+    .body_forecast
+    {
+        flex-direction: column;
+        gap: 30px;
+        margin-top: 5rem;
+        padding-bottom: 10px;
+    }
+
+    .botcont {
+        padding: 0 100px; /* Reduce padding for mobile */
+    }
+
+    .chatbot {
+        padding: 15px; 
+        border-radius: 15px; /* Slightly reduce border radius */
+    }
+
+
+    .body_forecast {
+        padding-top: 20px; /* Reduce padding */
+    }
+
+    .chatbot {
+        padding: 15px; /* Further reduce padding */
+    }
+
+    .chatbot-messages {
+        height: 200px; /* Reduce height */
+    }
+
+    .chat-input {
+        width: 60%; /* Further adjust input width */
+        padding: 6px; /* Reduce padding */
+    }
+
+    .chat-send-btn {
+        padding: 6px 15px; /* Adjust button padding */
+    }
+}
+
+@media (max-width: 480px) { /* Extra Small Devices */
+
+
+    .botcont {
+        padding: 0 10px;
+    }
+
+    .chatbot {
+        padding: 10px; /* Minimal padding */
+    }
+
+    .tablecont {
+        padding: 10px; /* Minimal padding */
+    }
+
+    .tablecont h1 {
+        font-size: 1rem; /* Minimized font size */
+    }
+
+    table th, table td {
+        font-size: 0.75rem; /* Minimized font size */
+        padding: 2px; /* Minimal padding */
+    }
+
+    .pagination {
+        flex-direction: column; 
+        gap: 0.4rem;
+        align-items: center; /* Center buttons */
+    }
+
+    .chatbot {
+        padding: 10px; /* Minimal padding */
+    }
+
+    .chatbot-messages {
+        height: 150px; /* Further reduce height */
+    }
+
+    .chat-input {
+        width: 100%; /* Full width input */
+        padding: 5px; /* Minimal padding */
+    }
+
+    .chat-send-btn {
+        padding: 5px 10px; /* Minimal padding */
+    }
+}
+
+@media (max-width: 480px) { /* Extra Small Devices */
+    .botcont
+    {
+        padding: 0 0px;
+    }
+}
